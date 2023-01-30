@@ -1,14 +1,6 @@
 
 
-<% if user_signed_in? %>
-      <p>こんにちは、<%= current_user.email %></p>
-      <%= link_to "ログアウト", destroy_user_session_path, data: {"turbo-method": :delete} %>
-      <a href="/books">本一覧を見る</a>
-    <% else %>
-      <%= link_to "サインイン", new_user_session_path %>
-      <%= link_to "ユーザー登録", new_user_registration_path %>
-      <hr></hr>
-      <h1>Home Page</h1>
-      <br>
 
-    <% end %>
+
+<h1>ホームページ</h1>
+<%= link_to "本一覧をみる", books_path %>
